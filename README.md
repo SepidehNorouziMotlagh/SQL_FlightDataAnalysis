@@ -1,7 +1,4 @@
 # SQL_FlightDataAnalysis
-Here is a professional, ready-to-use README.md file for your GitHub repository.
-
-I have structured it to highlight your skills (CTEs, Window Functions, Joins) and clearly explain the project to anyone visiting your profile.
 
 ✈️ Flight Operations & Passenger Analysis SQL Project
 
@@ -30,38 +27,6 @@ Flights: Contains flight schedules, linking Airlines and Airports.
 
 Tickets: Transactional data linking Passengers to Flights with pricing.
 
-Entity Relationship Diagram (ERD)
-code
-Mermaid
-download
-content_copy
-expand_less
-erDiagram
-    AIRPORTS ||--o{ FLIGHTS : "origin/destination"
-    AIRLINES ||--o{ FLIGHTS : "operates"
-    PASSENGERS ||--o{ TICKETS : "purchases"
-    FLIGHTS ||--o{ TICKETS : "assigned_to"
-
-    AIRPORTS {
-        int AirportID PK
-        string Name
-        string Location
-        string Country
-    }
-    FLIGHTS {
-        int FlightID PK
-        int Origin FK
-        int Destination FK
-        datetime DepartureTime
-        datetime ArrivalTime
-        int AirlineID FK
-    }
-    TICKETS {
-        int TicketID PK
-        int PassengerID FK
-        int FlightID FK
-        decimal Price
-    }
 🧠 Key SQL Concepts Demonstrated
 
 This project utilizes Microsoft SQL Server (T-SQL) syntax and highlights the following capabilities:
